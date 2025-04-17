@@ -1,0 +1,7 @@
+https://leetcode.com/problems/excel-sheet-column-number/
+https://leetcode.com/problems/sort-vowels-in-a-string/description/
+https://leetcode.com/problems/integer-to-roman/
+
+
+
+these types of question are weakness where there is some logic and code should be written accorsing to that and more and more edge cases 
