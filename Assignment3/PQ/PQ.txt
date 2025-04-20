@@ -1,0 +1,44 @@
+Java PriorityQueue with Comparator – Anonymous Class Explanation
+===============================================================
+
+Code Example:
+-------------
+PriorityQueue<Student> pqStudents = new PriorityQueue<>(new Comparator<Student>() {
+    @Override
+    public int compare(Student o1, Student o2) {
+        System.out.println("I am called from comparator");
+        return o1.rollNum - o2.rollNum;
+    }
+});
+
+Explanation:
+------------
+- `Comparator<Student>` is a functional interface in Java (an interface with a single abstract method).
+- The code above creates an **anonymous inner class** that implements the `Comparator<Student>` interface.
+- Inside this anonymous class, the `compare()` method is overridden to provide a custom sorting logic based on `rollNum`.
+
+What is an Anonymous Class?
+----------------------------
+- It is a one-time-use class without a name.
+- It implements an interface or extends a class inline.
+- You use it when you don’t want to create a separate named class.
+
+Equivalent Expanded Version:
+----------------------------
+class StudentRollNumComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student o1, Student o2) {
+        System.out.println("I am called from comparator");
+        return o1.rollNum - o2.rollNum;
+    }
+}
+
+Usage:
+PriorityQueue<Student> pqStudents = new PriorityQueue<>(new StudentRollNumComparator());
+
+Summary:
+--------
+- You're not "overriding" a method on an object directly.
+- You're defining an anonymous class that implements `Comparator<Student>` and passes it to the `PriorityQueue` constructor.
+- This is standard Java syntax and widely used in sorting and custom logic scenarios.
+"""
