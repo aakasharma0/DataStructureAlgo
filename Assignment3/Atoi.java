@@ -1,4 +1,3 @@
-package PQ;
 
 public class Atoi {
     public int myAtoi(String s) {
